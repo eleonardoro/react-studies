@@ -174,68 +174,34 @@ import ReactDOM from 'react-dom';
 
 
 
-class MeuComponente extends React.Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = { exibir: false }
-    }
-
-    alterarState = () => {
-        let converter = !this.state.exibir
-
-        this.setState({ exibir: converter })
-
-    }
-
-    render() {
-
-        let meuTexto = ''
-
-        if (this.state.exibir)
-            meuTexto = <h1>Oi!</h1>
-        else
-            meuTexto = ''
-
-        return (
-            <div>
-                {meuTexto}
-                <button onClick={this.alterarState}>Clique aqui</button>
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
-
-
-
-
-
-
-
-
-
-
-
-
 // class MeuComponente extends React.Component {
 
-//     render() {
-//         let cores = ['Azul', 'Amarelo', 'Vermelho']
+//     constructor(props) {
+//         super(props)
 
-//         let listar = cores.map((cor, index) => {
-//             return <li key={index}>{index} - {cor}</li>
-//         })
+//         this.state = { exibir: false }
+//     }
+
+//     alterarState = () => {
+//         let converter = !this.state.exibir
+
+//         this.setState({ exibir: converter })
+
+//     }
+
+//     render() {
+
+//         let meuTexto = ''
+
+//         if (this.state.exibir)
+//             meuTexto = <h1>Oi!</h1>
+//         else
+//             meuTexto = ''
 
 //         return (
 //             <div>
-//                 <h1>Listas e Chaves</h1>
-//                 <ul>
-//                     {listar}
-//                 </ul>
+//                 {meuTexto}
+//                 <button onClick={this.alterarState}>Clique aqui</button>
 //             </div>
 //         )
 //     }
@@ -243,6 +209,40 @@ ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getEle
 // }
 
 // ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+
+
+
+class MeuComponente extends React.Component {
+
+    render() {
+        let cores = ['Azul', 'Amarelo', 'Vermelho']
+
+        let listar = cores.map((cor, index) => {
+            return <li key={index}>{index} - {cor}</li>
+        })
+
+        return (
+            <div>
+                <h1>Listas e Chaves</h1>
+                <ul>
+                    {listar}
+                </ul>
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
