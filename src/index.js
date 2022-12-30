@@ -58,43 +58,43 @@ import ReactDOM from 'react-dom';
 
 
 
-class Componente extends React.Component{
-    render(){
-        return(
-            <div>
-            <h1>Olá {this.props.nome}</h1>
-            <h1>Olá {this.props.informacoes.nome}, você tem {this.props.informacoes.idade} anos, certo?</h1>
-            </div>
-        );
-    }
-}
-
-//valor dinâmico
-var dados = {nome: "Léo", idade: 33};
-
-ReactDOM.render(
-    <Componente nome="Ralf" informacoes={dados}/>,
-    document.getElementById('root')
-)
-
-
-
-// class Componente extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = { nome: 'Léo' };
-//     }
-
-//     render() {
-//         return <h1>{this.state.nome}</h1>
+// class Componente extends React.Component{
+//     render(){
+//         return(
+//             <div>
+//             <h1>Olá {this.props.nome}</h1>
+//             <h1>Olá {this.props.informacoes.nome}, você tem {this.props.informacoes.idade} anos, certo?</h1>
+//             </div>
+//         );
 //     }
 // }
 
+// //valor dinâmico
+// var dados = {nome: "Léo", idade: 33};
+
 // ReactDOM.render(
-//     <Componente/>,
+//     <Componente nome="Ralf" informacoes={dados}/>,
 //     document.getElementById('root')
-// );
+// )
+
+
+
+class Componente extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { nome: 'Léo' };
+    }
+
+    render() {
+        return <h1>{this.state.nome}</h1>
+    }
+}
+
+ReactDOM.render(
+    <Componente/>,
+    document.getElementById('root')
+);
 
 
 
