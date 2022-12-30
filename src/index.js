@@ -277,60 +277,60 @@ import ReactDOM from 'react-dom';
 
 
 
-import './estilos.css'
-
-class MeuComponente extends React.Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = { cor: 'vermelha' }
-    }
-
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({ cor: 'azul' })
-        }, 2000)
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Minha cor preferida é {this.state.cor}</h1>
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
-
-
-
-
-
-
-
-
+// import './estilos.css'
 
 // class MeuComponente extends React.Component {
 
-//     minhaFuncao = (elemento) => {
-//         elemento.preventDefault()
-//         alert('Testando evento onSubmit')
+//     constructor(props) {
+//         super(props)
+
+//         this.state = { cor: 'vermelha' }
+//     }
+
+//     componentDidMount() {
+//         setTimeout(() => {
+//             this.setState({ cor: 'azul' })
+//         }, 2000)
 //     }
 
 //     render() {
 //         return (
-//             <form onSubmit={this.minhaFuncao} action='www.google.com.br'>
-//                 <input type='submit'/>
-//             </form>
+//             <div>
+//                 <h1>Minha cor preferida é {this.state.cor}</h1>
+//             </div>
 //         )
 //     }
 
 // }
 
 // ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+class MeuComponente extends React.Component {
+
+    minhaFuncao = (elemento) => {
+        elemento.preventDefault()
+        alert('Testando evento onSubmit')
+    }
+
+    render() {
+        return (
+            <form onSubmit={this.minhaFuncao} action='www.google.com.br'>
+                <input type='submit'/>
+            </form>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
