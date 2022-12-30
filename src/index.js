@@ -143,72 +143,72 @@ import ReactDOM from 'react-dom';
 
 
 
-class MeuComponente extends React.Component{
+// class MeuComponente extends React.Component{
 
-    constructor(props){
-        super(props)
-
-        this.state = {texto: this.props.textoInicial}
-
-    }
-
-    minhaFuncao = (event) => {
-        this.setState({texto : event.target.value})
-    }
-
-    render(){
-        return(
-            <div>
-                <h1>{this.state.texto}</h1>
-                <input type='text' onChange={this.minhaFuncao} value={this.state.texto}/>
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...'/>, document.getElementById('root'));
-
-
-
-
-
-
-// class MeuComponente extends React.Component {
-
-//     constructor(props) {
+//     constructor(props){
 //         super(props)
 
-//         this.state = { exibir: false }
-//     }
-
-//     alterarState = () => {
-//         let converter = !this.state.exibir
-
-//         this.setState({ exibir: converter })
+//         this.state = {texto: this.props.textoInicial}
 
 //     }
 
-//     render() {
+//     minhaFuncao = (event) => {
+//         this.setState({texto : event.target.value})
+//     }
 
-//         let meuTexto = ''
-
-//         if (this.state.exibir)
-//             meuTexto = <h1>Oi!</h1>
-//         else
-//             meuTexto = ''
-
-//         return (
+//     render(){
+//         return(
 //             <div>
-//                 {meuTexto}
-//                 <button onClick={this.alterarState}>Clique aqui</button>
+//                 <h1>{this.state.texto}</h1>
+//                 <input type='text' onChange={this.minhaFuncao} value={this.state.texto}/>
 //             </div>
 //         )
 //     }
 
 // }
 
-// ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+// ReactDOM.render(<MeuComponente textoInicial='Digite algo...'/>, document.getElementById('root'));
+
+
+
+
+
+
+class MeuComponente extends React.Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = { exibir: false }
+    }
+
+    alterarState = () => {
+        let converter = !this.state.exibir
+
+        this.setState({ exibir: converter })
+
+    }
+
+    render() {
+
+        let meuTexto = ''
+
+        if (this.state.exibir)
+            meuTexto = <h1>Oi!</h1>
+        else
+            meuTexto = ''
+
+        return (
+            <div>
+                {meuTexto}
+                <button onClick={this.alterarState}>Clique aqui</button>
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
