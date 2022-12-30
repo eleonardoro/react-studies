@@ -103,71 +103,71 @@ import ReactDOM from 'react-dom';
 
 
 
-class Componente extends React.Component {
+// class Componente extends React.Component {
 
-    mensagem(nome){
-        alert('Hello ' + nome);
-    }
-
-    minhaArrowFunction = (curso) =>{
-        alert('funfou: ' + curso)
-    }
-
-    teclado = (event) => {
-        alert(event.target.value)
-    }
-
-    render() {
-        return <div>
-            <button onClick={this.mensagem.bind(this, 'Léo')}>Olá!</button>
-            <br/>
-            <button onClick={() => this.minhaArrowFunction('ReactJs')}>Funfa?!</button>
-            <br/>
-            <br/>
-            <input type='text' onChange={this.teclado} />
-            <br/>
-            <br/>
-        </div>
-    }
-}
-
-ReactDOM.render(
-    <Componente/>,
-    document.getElementById('root')
-);
-
-
-
-
-
-
-
-
-// class MeuComponente extends React.Component{
-
-//     constructor(props){
-//         super(props)
-
-//         this.state = {texto: this.props.textoInicial}
-
+//     mensagem(nome){
+//         alert('Hello ' + nome);
 //     }
 
-//     minhaFuncao = (event) => {
-//         this.setState({texto : event.target.value})
+//     minhaArrowFunction = (curso) =>{
+//         alert('funfou: ' + curso)
 //     }
 
-//     render(){
-//         return(
-//             <div>
-//                 <h1>{this.state.texto}</h1>
-//                 <input type='text' onChange={this.minhaFuncao} value={this.state.texto}/>
-//             </div>
-//         )
+//     teclado = (event) => {
+//         alert(event.target.value)
 //     }
 
+//     render() {
+//         return <div>
+//             <button onClick={this.mensagem.bind(this, 'Léo')}>Olá!</button>
+//             <br/>
+//             <button onClick={() => this.minhaArrowFunction('ReactJs')}>Funfa?!</button>
+//             <br/>
+//             <br/>
+//             <input type='text' onChange={this.teclado} />
+//             <br/>
+//             <br/>
+//         </div>
+//     }
 // }
 
-// ReactDOM.render(<MeuComponente textoInicial='Digite algo...'/>, document.getElementById('root'));
+// ReactDOM.render(
+//     <Componente/>,
+//     document.getElementById('root')
+// );
+
+
+
+
+
+
+
+
+class MeuComponente extends React.Component{
+
+    constructor(props){
+        super(props)
+
+        this.state = {texto: this.props.textoInicial}
+
+    }
+
+    minhaFuncao = (event) => {
+        this.setState({texto : event.target.value})
+    }
+
+    render(){
+        return(
+            <div>
+                <h1>{this.state.texto}</h1>
+                <input type='text' onChange={this.minhaFuncao} value={this.state.texto}/>
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...'/>, document.getElementById('root'));
 
 
 
