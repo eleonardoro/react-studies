@@ -221,49 +221,21 @@ import ReactDOM from 'react-dom';
 
 
 
-class MeuComponente extends React.Component {
-
-    render() {
-        let cores = ['Azul', 'Amarelo', 'Vermelho']
-
-        let listar = cores.map((cor, index) => {
-            return <li key={index}>{index} - {cor}</li>
-        })
-
-        return (
-            <div>
-                <h1>Listas e Chaves</h1>
-                <ul>
-                    {listar}
-                </ul>
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
-
-
-
-
-
-
-// import './estilos.css'
-
 // class MeuComponente extends React.Component {
 
 //     render() {
-//         const estilo = {
-//             color : 'blue',
-//             borderBottom : 'solid 5px green'
-//         }
+//         let cores = ['Azul', 'Amarelo', 'Vermelho']
+
+//         let listar = cores.map((cor, index) => {
+//             return <li key={index}>{index} - {cor}</li>
+//         })
 
 //         return (
 //             <div>
-//                 <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>CSS Interno (inline)</h1>
-//                 <h1 style={estilo}>CSS através de variáveis e constantes</h1>
-//                 <h1 className='minhaClasse'>CSS através de classes</h1>
+//                 <h1>Listas e Chaves</h1>
+//                 <ul>
+//                     {listar}
+//                 </ul>
 //             </div>
 //         )
 //     }
@@ -271,6 +243,34 @@ ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getEle
 // }
 
 // ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+
+
+
+
+
+
+import './estilos.css'
+
+class MeuComponente extends React.Component {
+
+    render() {
+        const estilo = {
+            color : 'blue',
+            borderBottom : 'solid 5px green'
+        }
+
+        return (
+            <div>
+                <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>CSS Interno (inline)</h1>
+                <h1 style={estilo}>CSS através de variáveis e constantes</h1>
+                <h1 className='minhaClasse'>CSS através de classes</h1>
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
