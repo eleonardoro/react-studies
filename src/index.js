@@ -313,24 +313,24 @@ import ReactDOM from 'react-dom';
 
 
 
-class MeuComponente extends React.Component {
+// class MeuComponente extends React.Component {
 
-    minhaFuncao = (elemento) => {
-        elemento.preventDefault()
-        alert('Testando evento onSubmit')
-    }
+//     minhaFuncao = (elemento) => {
+//         elemento.preventDefault()
+//         alert('Testando evento onSubmit')
+//     }
 
-    render() {
-        return (
-            <form onSubmit={this.minhaFuncao} action='www.google.com.br'>
-                <input type='submit'/>
-            </form>
-        )
-    }
+//     render() {
+//         return (
+//             <form onSubmit={this.minhaFuncao} action='www.google.com.br'>
+//                 <input type='submit'/>
+//             </form>
+//         )
+//     }
 
-}
+// }
 
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+// ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
