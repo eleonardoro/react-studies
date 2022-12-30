@@ -249,54 +249,21 @@ import ReactDOM from 'react-dom';
 
 
 
-import './estilos.css'
-
-class MeuComponente extends React.Component {
-
-    render() {
-        const estilo = {
-            color : 'blue',
-            borderBottom : 'solid 5px green'
-        }
-
-        return (
-            <div>
-                <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>CSS Interno (inline)</h1>
-                <h1 style={estilo}>CSS através de variáveis e constantes</h1>
-                <h1 className='minhaClasse'>CSS através de classes</h1>
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
-
-
-
-
-
-
 // import './estilos.css'
 
 // class MeuComponente extends React.Component {
 
-//     constructor(props) {
-//         super(props)
-
-//         this.state = { cor: 'vermelha' }
-//     }
-
-//     componentDidMount() {
-//         setTimeout(() => {
-//             this.setState({ cor: 'azul' })
-//         }, 2000)
-//     }
-
 //     render() {
+//         const estilo = {
+//             color : 'blue',
+//             borderBottom : 'solid 5px green'
+//         }
+
 //         return (
 //             <div>
-//                 <h1>Minha cor preferida é {this.state.cor}</h1>
+//                 <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>CSS Interno (inline)</h1>
+//                 <h1 style={estilo}>CSS através de variáveis e constantes</h1>
+//                 <h1 className='minhaClasse'>CSS através de classes</h1>
 //             </div>
 //         )
 //     }
@@ -304,6 +271,39 @@ ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getEle
 // }
 
 // ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
+
+
+
+
+
+
+import './estilos.css'
+
+class MeuComponente extends React.Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = { cor: 'vermelha' }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ cor: 'azul' })
+        }, 2000)
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Minha cor preferida é {this.state.cor}</h1>
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(<MeuComponente textoInicial='Digite algo...' />, document.getElementById('root'));
 
 
 
