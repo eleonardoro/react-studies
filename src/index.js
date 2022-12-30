@@ -79,55 +79,15 @@ import ReactDOM from 'react-dom';
 
 
 
-class Componente extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { nome: 'Léo' };
-    }
-
-    render() {
-        return <h1>{this.state.nome}</h1>
-    }
-}
-
-ReactDOM.render(
-    <Componente/>,
-    document.getElementById('root')
-);
-
-
-
-
-
-
-
-
 // class Componente extends React.Component {
+//     constructor(props) {
+//         super(props);
 
-//     mensagem(nome){
-//         alert('Hello ' + nome);
-//     }
-
-//     minhaArrowFunction = (curso) =>{
-//         alert('funfou: ' + curso)
-//     }
-
-//     teclado = (event) => {
-//         alert(event.target.value)
+//         this.state = { nome: 'Léo' };
 //     }
 
 //     render() {
-//         return <div>
-//             <button onClick={this.mensagem.bind(this, 'Léo')}>Olá!</button>
-//             <br/>
-//             <button onClick={() => this.minhaArrowFunction('ReactJs')}>Funfa?!</button>
-//             <br/>
-//             <br/>
-//             <input type='text' onChange={this.teclado} />
-//             <br/>
-//             <br/>
-//         </div>
+//         return <h1>{this.state.nome}</h1>
 //     }
 // }
 
@@ -135,6 +95,46 @@ ReactDOM.render(
 //     <Componente/>,
 //     document.getElementById('root')
 // );
+
+
+
+
+
+
+
+
+class Componente extends React.Component {
+
+    mensagem(nome){
+        alert('Hello ' + nome);
+    }
+
+    minhaArrowFunction = (curso) =>{
+        alert('funfou: ' + curso)
+    }
+
+    teclado = (event) => {
+        alert(event.target.value)
+    }
+
+    render() {
+        return <div>
+            <button onClick={this.mensagem.bind(this, 'Léo')}>Olá!</button>
+            <br/>
+            <button onClick={() => this.minhaArrowFunction('ReactJs')}>Funfa?!</button>
+            <br/>
+            <br/>
+            <input type='text' onChange={this.teclado} />
+            <br/>
+            <br/>
+        </div>
+    }
+}
+
+ReactDOM.render(
+    <Componente/>,
+    document.getElementById('root')
+);
 
 
 
