@@ -14,3 +14,20 @@ ReactDOM.render(
     <h1>Com JSX</h1>,
     document.getElementById('root')
 );
+
+
+
+
+
+
+
+
+// Componente
+class MeuComponente extends React.Component{
+    render(){
+        return <h1>Meu primeiro componente</h1>
+    }
+}
+
+ReactDOM.render(<MeuComponente/>,
+document.getElementById('root'))
