@@ -12,6 +12,7 @@ class Main extends React.Component {
     this.state = {
       nome: "",
       idade: null,
+      vetor: [],
     };
   }
 
@@ -21,14 +22,22 @@ class Main extends React.Component {
 
   aoClicar = (botao) => {
     botao.preventDefault();
-    console.log(this.state);
+
+    var vetorAux = [...this.state.vetor];
+
+    vetorAux.push({
+      nome: this.state.nome,
+      idade: this.state.idade,
+    });
+
+    this.setState({ vetor: vetorAux });
   };
 
   render() {
     return (
       <div>
         <Formulario funcaoBotao={this.aoClicar} funcaoCampo={this.aoDigitar} />
-        <Tabela />
+        <Tabela dados={this.state.vetor} />
       </div>
     );
   }
