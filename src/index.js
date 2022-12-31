@@ -11,7 +11,7 @@ class Main extends React.Component {
 
     this.state = {
       nome: "",
-      idade: null,
+      idade: "",
       vetor: [],
     };
   }
@@ -30,13 +30,13 @@ class Main extends React.Component {
       idade: this.state.idade,
     });
 
-    this.setState({ vetor: vetorAux });
+    this.setState({ vetor: vetorAux, nome: "", idade: "" });
   };
 
   render() {
     return (
       <div>
-        <Formulario funcaoBotao={this.aoClicar} funcaoCampo={this.aoDigitar} />
+        <Formulario campoNome={this.state.nome} campoIdade={this.state.idade} funcaoBotao={this.aoClicar} funcaoCampo={this.aoDigitar} />
         <Tabela dados={this.state.vetor} />
       </div>
     );

@@ -6,6 +6,7 @@ class Formulario extends React.Component {
       <form onSubmit={this.props.funcaoBotao}>
         <input
           type="text"
+          value={this.props.campoNome}
           placeholder="Digite o nome"
           className="form-control"
           name="nome"
@@ -13,6 +14,7 @@ class Formulario extends React.Component {
         />
         <input
           type="number"
+          value={this.props.campoIdade}
           placeholder="Digite a idade"
           className="form-control"
           name="idade"
